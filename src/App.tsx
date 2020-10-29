@@ -1,11 +1,19 @@
 import React from 'react';
 import './App.css';
+import AccountSummary from './components/AccountSummary';
+import { AddTransaction } from './components/AddTransaction';
+import { Balance } from './components/Balance';
+import Header from './components/Header';
+import { TransactionHistory } from './components/TransactionHistory';
 
 function App() {
   return (
     <div >
-      <h1>Expense Tracker</h1> 
-
+      <Header />
+      <Balance />
+      <AccountSummary />
+      <TransactionHistory />
+      <AddTransaction />
     </div>
   );
 }
