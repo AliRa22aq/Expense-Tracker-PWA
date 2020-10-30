@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 
 export const AddTransaction = () => {
     
-    const [description, setDiscription] = useState();
-    const [transactionAmount, setTransactionAmount] = useState();
+    const [description, setDiscription] = useState("");
+    const [transactionAmount, setTransactionAmount] = useState(0);
 
     return (
         <div>
@@ -16,6 +16,7 @@ export const AddTransaction = () => {
                         id= "description"
                         placeholder="Transaction details" 
                         value={description}
+                        onChange = {(e) => setDiscription(e.target.value)}
                     />
                 </div>
                 <div>
@@ -25,6 +26,8 @@ export const AddTransaction = () => {
                         id= "descriptionAmount"
                         placeholder="Enter Transaction Amount" 
                         value={transactionAmount}
+                        onChange = {(e) => setTransactionAmount(Number(e.target.value))}
+
 
                     />
                 </div>
