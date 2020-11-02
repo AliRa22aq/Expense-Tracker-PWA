@@ -11,7 +11,6 @@ export const AddTransaction = () => {
 
     const onSubmit = (e: any) => {
         e.preventDefault();
-
         const newTransaction: {id: number, description: string, transactionAmount: number} = {
             id: new Date().getTime(),
             description,
@@ -19,7 +18,6 @@ export const AddTransaction = () => {
         }
 
         addTransaction(newTransaction);
-        console.log(newTransaction)
 
     }
 
@@ -46,7 +44,7 @@ export const AddTransaction = () => {
                         id= "descriptionAmount"
                         placeholder="Enter Transaction Amount" 
                         value={transactionAmount}
-                        onChange = {(e) => setTransactionAmount(Number(e.target.value))}
+                        onChange = {(e) => setTransactionAmount(parseInt(e.target.value))}
                         required
                     />
                 </div>

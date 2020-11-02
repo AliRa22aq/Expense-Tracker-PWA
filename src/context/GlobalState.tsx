@@ -15,7 +15,6 @@ export const GlobalProvider = ( {children}: any) => {
     const [state, dispatch] = useReducer(AppReducer, initialState)
 
     const delTransaction = (id: number) => {
-        console.log(id)
         dispatch({
             type: 'DELETE_TRANSACTION',
             payload: id
