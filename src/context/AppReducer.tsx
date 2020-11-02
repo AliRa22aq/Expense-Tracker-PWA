@@ -1,4 +1,4 @@
-export const AppReducer = (state: { transactions: any[]; }, action: { type: any; payload: any; }) => {
+export const AppReducer = (state: { transactions: any }, action: any ) => {
     switch(action.type) {
         case 'DELETE_TRANSACTION':
             return {

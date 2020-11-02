@@ -1,3 +1,4 @@
+import { AnyAaaaRecord } from 'dns';
 import React, { useState, useContext } from 'react';
 import { GlobalContext } from '../context/GlobalState';
 
@@ -9,10 +10,10 @@ export const AddTransaction = () => {
 
     const { addTransaction } = useContext(GlobalContext);
 
-    const onSubmit = (e) => {
+    const onSubmit = (e: any) => {
         e.preventDefault();
 
-        const newTransaction = {
+        const newTransaction: {id: number, description: string, transactionAmount: number} = {
             id: new Date().getTime(),
             description,
             transactionAmount: +transactionAmount
