@@ -1,4 +1,3 @@
-import { AnyAaaaRecord } from 'dns';
 import React, { useState, useContext } from 'react';
 import { GlobalContext } from '../context/GlobalState';
 
@@ -20,6 +19,7 @@ export const AddTransaction = () => {
         }
 
         addTransaction(newTransaction);
+        console.log(newTransaction)
 
     }
 
@@ -30,23 +30,24 @@ export const AddTransaction = () => {
                 <div> 
                     <label> Description of Transaction </label>
                     <input
+                        required
                         type="text"
                         id= "description"
                         placeholder="Transaction details" 
                         value={description}
                         onChange = {(e) => setDiscription(e.target.value)}
+                        
                     />
                 </div>
                 <div>
                 <label> Amount of Transaction </label>
                     <input
-                        type="text"
+                        type="number"
                         id= "descriptionAmount"
                         placeholder="Enter Transaction Amount" 
                         value={transactionAmount}
                         onChange = {(e) => setTransactionAmount(Number(e.target.value))}
-
-
+                        required
                     />
                 </div>
                 <button> Add Transaction </button>

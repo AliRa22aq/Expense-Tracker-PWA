@@ -7,12 +7,10 @@ const initialState: any = {
     transactions : []
 }
 
-console.log(initialState)
-
 
 export const GlobalContext = createContext(initialState);
 
-export const GlobalProvider = ( props: any) => {
+export const GlobalProvider = ( {children}: any) => {
 
     const [state, dispatch] = useReducer(AppReducer, initialState)
 
@@ -38,7 +36,7 @@ export const GlobalProvider = ( props: any) => {
             delTransaction,
             addTransaction
         }}>
-            { props.children}
+            { children}
 
         </GlobalContext.Provider>
     )
