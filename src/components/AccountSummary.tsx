@@ -4,7 +4,7 @@ import { GlobalContext } from '../context/GlobalState';
 
 const AccountSummary = () => {
 
-    const { transactions } = useContext(GlobalContext);
+    const { transactions, check } = useContext(GlobalContext);
 
     const transactionAmounts = transactions.map((transaction: { transactionAmount: any; }) => transaction.transactionAmount);
 
