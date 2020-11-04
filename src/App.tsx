@@ -6,15 +6,19 @@ import { Balance } from './components/Balance';
 import Header from './components/Header';
 import { TransactionHistory } from './components/TransactionHistory';
 import {GlobalProvider} from './context/GlobalState'
+import { Grid } from '@material-ui/core';
+
 
 function App() {
   return (
     <GlobalProvider>
-      <Header />
+      
+      <Header /> 
       <Balance />
       <AccountSummary />
       <TransactionHistory />
       <AddTransaction />
+      
     </GlobalProvider>
   );
 }

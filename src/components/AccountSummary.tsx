@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import { GlobalContext } from '../context/GlobalState';
+import {Grid} from '@material-ui/core';
 
 
 const AccountSummary = () => {
@@ -20,16 +21,18 @@ const AccountSummary = () => {
 
 
     return (
-        <div>
-            <div> 
-               <h2>  Income </h2>
-               <p> $ {income} </p>
-            </div>
-            <div> 
+        <Grid container>
+            <Grid item xs={12} lg={6}>
+                <h2>  Income </h2>
+                <p> $ {income} </p>
+            </Grid>
+            <Grid item xs={12} lg={6}>
                 <h2> Expense </h2>
-            <p> $ {expense} </p>
-            </div>
-        </div>
+                <p> $ {expense} </p>
+            </Grid>
+            
+        </Grid>
+        
     )
 }
 

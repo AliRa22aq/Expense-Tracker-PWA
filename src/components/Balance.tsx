@@ -1,5 +1,7 @@
 import React, { useContext } from 'react'
 import { GlobalContext } from '../context/GlobalState';
+import { Grid } from '@material-ui/core';
+
 
 
 export const Balance = () => {
@@ -12,9 +14,13 @@ export const Balance = () => {
     const balance = transactionAmounts.reduce((acc: any, item: any) => (acc += item), 0).toFixed(2);
 
     return (
-        <div>
-            <h4>Current Balance</h4>
-            <h1>${balance}</h1>
-        </div>
+        <Grid container spacing ={3}>   
+        
+        <Grid item xs={12}> 
+        <h4>Current Balance</h4> 
+        <h1>${balance}</h1> 
+        </Grid>
+        
+        </Grid>
     )
 }
