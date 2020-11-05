@@ -7,7 +7,7 @@ import { Grid } from '@material-ui/core';
 
 const AccountSummary = () => {
 
-    const { transactions, check } = useContext(GlobalContext);
+    const { transactions } = useContext(GlobalContext);
 
     const transactionAmounts = transactions.map((transaction: { transactionAmount: any; }) => transaction.transactionAmount);
 
