@@ -9,6 +9,17 @@ body {
 
 }
 
+
+@media only screen and (max-width: 600px) {
+    body {
+        margin: auto;
+        padding: 0rem 2rem;
+        background-color: #ffdf43;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-origin: content-box;    }
+  }
+
 .heading {
     display: flex;
     align-items: center;
