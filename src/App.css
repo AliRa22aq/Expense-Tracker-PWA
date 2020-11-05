@@ -35,10 +35,11 @@ body {
     text-align: center;
     border: black 2px solid;
     border-spacing: 1rem;
+    width: 100%;
 }
 
 .boarder {
-width: 80%;
+width: 90%;
 }
 
 .addtransaction {
