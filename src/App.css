@@ -22,6 +22,13 @@ body {
     text-align: center;
 }
 
+
+.max {
+    max-height: 85vh;
+    overflow-y: scroll;
+
+}
+
 .summary {
     align-items: center;
     align-content: center;
