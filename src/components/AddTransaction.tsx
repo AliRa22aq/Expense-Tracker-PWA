@@ -69,7 +69,7 @@ export const AddTransaction = () => {
                         min={0}
                     />
                 </div>
-                        <button> Add Transaction </button>
+                        <button className='button'> Add Transaction </button>
             </form>
         </div>
     )
