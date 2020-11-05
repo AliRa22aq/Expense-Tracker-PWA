@@ -1,24 +1,29 @@
 import React, { useContext } from 'react'
 import { GlobalContext } from '../context/GlobalState';
+import '../App.css';
+import DeleteRoundedIcon from '@material-ui/icons/DeleteRounded';
 
 
-export const Transaction = ( {transaction}: any ) => {
+export const Transaction = ({ transaction }: any) => {
 
-    const {delTransaction} = useContext(GlobalContext);
+    const { delTransaction } = useContext(GlobalContext);
 
-
-    const sign = transaction.transactionAmount > 0 ? '+' : '-';
-
+    const sign = transaction.transactionAmount >= 0 ? '+' : '-';
+    const transactionType = transaction.transactionAmount > 0 ? 'plus' : 'minus';
 
 
 
     return (
         <div>
-            <li>
-                {transaction.description} |
+        <li className={transactionType}>
+                {transaction.description}
                 <span>{sign}${Math.abs(transaction.transactionAmount)}</span>
-                <button onClick={()=> delTransaction(transaction.id)}> X </button>
+
+                <button className='delete-btn' onClick={() => delTransaction(transaction.id)}> <DeleteRoundedIcon /> </button>
+
+
             </li>
+
         </div>
     )
 }

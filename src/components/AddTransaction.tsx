@@ -2,6 +2,8 @@ import React, { useState, useContext } from 'react';
 import { GlobalContext } from '../context/GlobalState';
 import Switch from '@material-ui/core/Switch';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
+import '../App.css'
+
 
 
 export const AddTransaction = () => {
@@ -33,7 +35,7 @@ export const AddTransaction = () => {
     }
 
     return (
-        <div onSubmit={onSubmit}>
+        <div onSubmit={onSubmit} className='addtransaction'>
             <h3> Add New Transaction </h3>
             <form>
 
@@ -42,7 +44,7 @@ export const AddTransaction = () => {
                     label="Expense"
                 />
 
-                <div>
+                <div className="form-control">
                     <label> Description of Transaction </label>
                     <input
                         required
@@ -54,7 +56,8 @@ export const AddTransaction = () => {
 
                     />
                 </div>
-                <div>
+
+                <div className="form-control">
                     <label> Amount of Transaction </label>
                     <input
                         type="number"
@@ -66,9 +69,8 @@ export const AddTransaction = () => {
                         min={0}
                     />
                 </div>
-                <button> Add Transaction </button>
+                        <button> Add Transaction </button>
             </form>
-
         </div>
     )
 }

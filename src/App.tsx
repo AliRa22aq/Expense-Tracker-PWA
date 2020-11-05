@@ -12,12 +12,32 @@ import { Grid } from '@material-ui/core';
 function App() {
   return (
     <GlobalProvider>
+
+      <Grid container spacing={3}> 
+
+      <Grid item xs={12}> <Header />  </Grid>
+
+      <Grid container spacing={3}>
+
+        <Grid item xs={12} lg={4} className='boarder'> 
+
+          <Grid item xs={12}> <Balance /> </Grid>
+          <Grid item xs={12} > <AccountSummary /> </Grid>
+          <Grid item xs={12} > <AddTransaction /> </Grid>
+
+        </Grid>
+        <Grid item xs={12} lg={8}> 
+            <TransactionHistory />
+        </Grid>
+
+      </Grid>
       
-      <Header /> 
-      <Balance />
-      <AccountSummary />
-      <TransactionHistory />
-      <AddTransaction />
+      
+      
+      
+      
+
+      </Grid>
       
     </GlobalProvider>
   );
