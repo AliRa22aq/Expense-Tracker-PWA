@@ -177,3 +177,16 @@ width: 90%;
   
   .button:hover {opacity: 1}
 
+
+  .opposite {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+
+  }
+  
+  .opposite1 {
+    display: flex;
+    justify-content: left;
+    margin-top: 0.5rem;
+  }

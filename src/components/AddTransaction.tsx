@@ -39,13 +39,9 @@ export const AddTransaction = () => {
             <h3> Add New Transaction </h3>
             <form>
 
-                <FormControlLabel
-                    control={<Switch checked={check} onChange={singCheck} name="check" />}
-                    label="Expense"
-                />
 
                 <div className="form-control">
-                    <label> Description of Transaction </label>
+                    <label className='opposite1'> Description of Transaction </label>
                     <input
                         required
                         type="text"
@@ -58,7 +54,13 @@ export const AddTransaction = () => {
                 </div>
 
                 <div className="form-control">
+                    <div className='opposite'> 
                     <label> Amount of Transaction </label>
+                     
+                    <FormControlLabel
+                    control={<Switch checked={check} onChange={singCheck} name="check" />}
+                    label="Expense"
+                /> </div>
                     <input
                         type="number"
                         id="descriptionAmount"
