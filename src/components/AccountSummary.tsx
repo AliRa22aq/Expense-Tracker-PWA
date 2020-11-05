@@ -24,14 +24,21 @@ const AccountSummary = () => {
 
     return (
         <Grid container className='summary'> 
-        <Grid item xs={6}>
+        <Grid item xs={6} >
+            <div className="income-border">
                 <h2>  Income </h2>
                 <p> $ {income} </p>
+
+            </div> 
+
         </Grid>
-        <Grid item xs={6}> 
+        <Grid item xs={6} >
+            <div className="expense-border"> 
 
                 <h2> Expense </h2>
                 <p> $ {expense} </p>
+
+            </div>
         </Grid>
         </Grid>
     )
