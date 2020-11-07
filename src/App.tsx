@@ -13,6 +13,8 @@ import {configNotification} from './components/firebase';
 
 function App() {
 
+  configNotification()
+
   return (
     <GlobalProvider>
 
@@ -31,7 +33,6 @@ function App() {
           </Grid>
           <Grid item xs={12} lg={8} className='max'>
             <TransactionHistory />
-            <button onClick={configNotification}> Click </button>
           </Grid>
 
         </Grid>
