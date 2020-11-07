@@ -10,7 +10,6 @@ import { Grid } from '@material-ui/core';
 import {configNotification} from './components/firebase';
 
 
-
 function App() {
 
   configNotification()
