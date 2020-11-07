@@ -7,10 +7,12 @@ import Header from './components/Header';
 import { TransactionHistory } from './components/TransactionHistory';
 import { GlobalProvider } from './context/GlobalState'
 import { Grid } from '@material-ui/core';
+import {configNotification} from './components/firebase';
 
 
 function App() {
 
+  configNotification()
 
   return (
     <GlobalProvider>
