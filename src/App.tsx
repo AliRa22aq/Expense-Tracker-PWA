@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import './App.css';
 import AccountSummary from './components/AccountSummary';
 import { AddTransaction } from './components/AddTransaction';
@@ -12,10 +12,7 @@ import {configNotification} from './components/firebase';
 
 function App() {
   
-  useEffect(() => {
     configNotification()
-  })
-
 
   return (
     <GlobalProvider>
