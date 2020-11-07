@@ -26,7 +26,6 @@ export function configNotification() {
         messaging.getToken().then((currentToken) => {
           if (currentToken) {
                 console.log(currentToken);
-                alert(currentToken)
           } else {
             // Show permission request.
             console.log('No registration token available. Request permission to generate one.');
