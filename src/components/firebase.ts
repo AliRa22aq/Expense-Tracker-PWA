@@ -18,14 +18,8 @@ const firebaseConfig = {
 export function configNotification() {
     
     Notification.requestPermission().then((permission) => {
-        console.log(permission)
-    
-        messaging.getToken().then((currentToken: any) => {console.log(currentToken)});
-
-
         messaging.getToken().then((currentToken) => {
           if (currentToken) {
-                console.log(currentToken);
           } else {
             // Show permission request.
             console.log('No registration token available. Request permission to generate one.');
