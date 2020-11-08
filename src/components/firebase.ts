@@ -19,6 +19,8 @@ export function configNotification() {
     
     Notification.requestPermission().then((permission) => {
         messaging.getToken().then((currentToken) => {
+          console.log(currentToken)
+          
           if (currentToken) {
           } else {
             // Show permission request.
